@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-
+//
 builder.Services.AddDbContext<SchoolContext>(options =>
 options.UseSqlServer(Configuration.GetConnectionString());
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
