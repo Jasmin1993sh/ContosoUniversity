@@ -16,8 +16,9 @@ builder.Services.AddControllersWithViews();
 
 
 
-//builder.Services.AddDbContext<SchoolContext>(options =>
-//options.UseSqlServer(Configuration.GetConnectionString("SchoolConnection")));
+
+builder.Services.AddDbContext<SchoolContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolConnection")));
 
 
 
