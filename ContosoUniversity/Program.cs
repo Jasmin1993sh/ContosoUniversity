@@ -1,23 +1,31 @@
 
 using ContosoUniversity.Data;
 using FluentAssertions.Common;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-
-
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 
-//
-builder.Services.AddDbContext<SchoolContext>(options =>
-options.UseSqlServer(Configuration.GetConnectionString());
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+//builder.Services.AddDbContext<SchoolContext>(options =>
+//options.UseSqlServer(Configuration.GetConnectionString("SchoolConnection")));
+
+
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 var app = builder.Build();
+
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -39,3 +47,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
