@@ -43,7 +43,7 @@ namespace ContosoUniversity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Corse", (string)null);
+                    b.ToTable("Course", (string)null);
                 });
 
             modelBuilder.Entity("ContosoUniversity.Models.Enrollment", b =>

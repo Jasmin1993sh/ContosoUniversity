@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoUniversity.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20230923173339_AgeNullable")]
-    partial class AgeNullable
+    [Migration("20231011122051_Second")]
+    partial class Second
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,7 +46,7 @@ namespace ContosoUniversity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Corse", (string)null);
+                    b.ToTable("Course", (string)null);
                 });
 
             modelBuilder.Entity("ContosoUniversity.Models.Enrollment", b =>

@@ -44,6 +44,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolConnection
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 var app = builder.Build();
+CreateDbIfNotExists(app);
 
 
 
