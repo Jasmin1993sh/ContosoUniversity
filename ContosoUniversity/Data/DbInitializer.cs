@@ -49,11 +49,11 @@ namespace ContosoUniversity.Data
 
             var enrollments = new Enrollment[]
             {
-            new Enrollment{StudentID=65,CourseID=25},//,Grade=Grade.A
-            new Enrollment{StudentID=66,CourseID=26},
-            new Enrollment{StudentID=67,CourseID=27},
-            new Enrollment{StudentID=68,CourseID=28},
-            new Enrollment{StudentID=69,CourseID=29}
+            new Enrollment{StudentID=1,CourseID=1},//,Grade=Grade.A
+            new Enrollment{StudentID=2,CourseID=2},
+            new Enrollment{StudentID=3,CourseID=3},
+            new Enrollment{StudentID=4,CourseID=4},
+            new Enrollment{StudentID=5,CourseID=5}
        
             };
             foreach (Enrollment e in enrollments)
