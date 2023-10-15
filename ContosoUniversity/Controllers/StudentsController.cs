@@ -35,6 +35,7 @@ namespace ContosoUniversity.Controllers
             }
             ViewData["CurrentFilter"] = searchString;
             var students = from s in _context.Students select s;
+            _context.Students.Select(student => student);
             if (!String.IsNullOrEmpty(searchString))
             {
                 students = students.Where(s => s.LastName.Contains(searchString)
